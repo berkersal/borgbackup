@@ -1,0 +1,8 @@
+[Unit]
+Description=Run automated backup script
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/path/to
+ExecStart=bash -c './automated_backups.sh'

@@ -1,0 +1,10 @@
+[Unit]
+Description=Run the service every Friday at 04:00
+
+[Timer]
+OnCalendar=Fri *-*-* 04:00:00
+# The 'Persistent=true' setting ensures that the timer will catch up and execute the missed job if the system was powered off or the timer was inactive at the scheduled time. 
+Persistent=true
+
+[Install]
+WantedBy=timers.target
